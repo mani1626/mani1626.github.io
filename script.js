@@ -25,3 +25,27 @@ var x = setInterval(function () {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+setInterval(() => {
+  const colors = [
+    "#9733ee",
+    "#da22ff",
+    "#9733ee",
+    "#da22ff",
+    "#5FC3E4",
+    "#E55D87",
+  ];
+  let body = document.querySelector("body");
+
+  let colorOne = colors[+(Math.random() * 6).toFixed()];
+  let colorTwo = colors[+(Math.random() * 6).toFixed()];
+
+  while (colorOne === colorTwo) {
+    colorOne = colors[+(Math.random() * 6).toFixed()];
+    colorTwo = colors[+(Math.random() * 6).toFixed()];
+  }
+
+  let direction = +(Math.random() * 360).toFixed();
+
+  body.style.background = `linear-gradient(${direction}deg, ${colorOne}, ${colorTwo})`;
+}, 900);
