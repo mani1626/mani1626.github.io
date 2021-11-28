@@ -208,7 +208,8 @@ const confettiObject = {
 };
 
 function randomConfetti() {
-  const confetti = Object.keys(confettiObject)[+(Math.random() * 5).toFixed()];
+  let index = +(Math.random() * 4).toFixed();
+  const confetti = Object.keys(confettiObject)[index];
   confettiObject[confetti].call();
 }
 
