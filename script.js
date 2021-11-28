@@ -30,13 +30,13 @@ setInterval(() => {
   const colors = [
     "#9733ee",
     "#da22ff",
-    "#9733ee",
-    "#da22ff",
-    "#5FC3E4",
-    "#E55D87",
     "#3CA55C",
-    "#B5AC49",
     "#F4D03F",
+    "#c31432",
+    "#11998e",
+    "#38ef7d",
+    "#fc4a1a",
+    "#f7b733",
   ];
   let body = document.querySelector("body");
 
@@ -52,7 +52,7 @@ setInterval(() => {
   let direction = +(Math.random() * 360).toFixed();
 
   body.style.background = `linear-gradient(${direction}deg, ${colorOne}, ${colorTwo})`;
-}, 900);
+}, 1500);
 
 /* */
 
@@ -136,7 +136,7 @@ function realisticLook() {
 }
 
 function snow() {
-  var duration = 15 * 1000;
+  var duration = 8 * 1000;
   var animationEnd = Date.now() + duration;
   var skew = 1;
 
@@ -215,3 +215,5 @@ function randomConfetti() {
 
 const btn = document.querySelector("body");
 btn.addEventListener("click", randomConfetti);
+
+setTimeout(randomConfetti, 3000);
