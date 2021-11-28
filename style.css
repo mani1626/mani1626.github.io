@@ -13,7 +13,8 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
   transition: all 0.5s;
@@ -31,14 +32,15 @@ body {
 }
 
 .timer {
-  font-size: 3.5rem;
+  font-size: 4vh;
+  margin: 0 1.7em;
 }
 
 .img1 {
   width: 10rem;
   height: 10rem;
 
-  background-image: url("./sticker_4.png");
+  background-image: url("./image1.png");
   background-position: center;
   background-size: cover;
 }
@@ -47,7 +49,7 @@ body {
   width: 10rem;
   height: 10rem;
 
-  background-image: url("./giphy_s.gif");
+  background-image: url("./image2.gif");
   background-position: center;
   background-size: cover;
 }
