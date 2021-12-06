@@ -58,3 +58,63 @@ body {
   width: auto;
   font-size: 3rem;
 }
+
+.name-container {
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-around;
+  max-width: 380px;
+  width: 100%;
+}
+
+.box {
+  width: 64px;
+  height: 64px;
+
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.8;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px #ccc;
+}
+
+.n {
+  background-image: url("./N.jpeg");
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.i {
+  background-image: url("./I.jpeg");
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.d {
+  background-image: url("./D.jpeg");
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.h {
+  background-image: url("./H.jpeg");
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.i {
+  background-image: url("./I.jpeg");
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.n:hover,
+.i:hover,
+.d:hover,
+.h:hover,
+.i:hover {
+  opacity: 1;
+}
