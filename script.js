@@ -15,14 +15,15 @@ var x = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Output the result in an element with id="demo"
-  document.querySelector(".timer").innerHTML =
-    days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
-
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    buckEyes();
+    setCurtains();
+  } else {
+    // Output the result in an element with id="demo"
+    document.querySelector(".timer").innerHTML =
+      days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
   }
 }, 1000);
 
@@ -216,4 +217,55 @@ function randomConfetti() {
 const btn = document.querySelector("body");
 btn.addEventListener("click", randomConfetti);
 
-setTimeout(randomConfetti, 3000);
+setTimeout(snow, 3000);
+
+function moveCurtains() {
+  const rightCurtain = document.querySelector(".right-curtain");
+  const leftCurtain = document.querySelector(".left-curtain");
+  const cake = document.querySelector(".cake");
+
+  const curtainContainer = document.querySelector(".curtain-container");
+  curtainContainer.addEventListener("click", () => {
+    rightCurtain.classList.add("move-right");
+    leftCurtain.classList.add("move-left");
+    cake.classList.add("fade");
+
+    document.querySelector(".name-container").style.opacity = 1;
+
+    setTimeout(() => {
+      const Change = document.querySelector("#change");
+      const video = document.createElement("video");
+      video.setAttribute("controls", "controls");
+      video.setAttribute("autoplay", "autoplay");
+      video.width = Change.clientWidth;
+      video.height = Change.clientHeight;
+      const source = document.createElement("source");
+      source.src = "mov_bd.mp4";
+
+      Change.appendChild(video);
+      video.appendChild(source);
+    }, 3000);
+  });
+}
+
+function setCurtains() {
+  const Change = document.querySelector("#change");
+  Change.innerHTML = "";
+
+  Change.classList.add("curtain-container");
+  Change.classList.remove("timer");
+
+  const rightCurtain = document.createElement("div");
+  const leftCurtain = document.createElement("div");
+  leftCurtain.classList.add("left-curtain");
+  rightCurtain.classList.add("right-curtain");
+
+  const cake = document.createElement("div");
+  cake.classList.add("cake");
+
+  Change.appendChild(leftCurtain);
+  Change.appendChild(rightCurtain);
+  Change.appendChild(cake);
+
+  moveCurtains();
+}

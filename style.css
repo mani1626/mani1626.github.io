@@ -105,3 +105,73 @@ body {
 .i {
   background-image: url("./I.jpeg");
 }
+
+.curtain-container {
+  width: 1024px;
+  height: 512px;
+  margin: 0 12px;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.left-curtain {
+  /* content: ""; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: url("./22.jpeg");
+  background-size: cover;
+  transition: all 2s ease-out;
+  z-index: 0;
+}
+
+.right-curtain {
+  /* content: ""; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url("./22.jpeg");
+  background-size: cover;
+  transition: all 2s ease-out;
+  z-index: 0;
+}
+
+.move-right {
+  transform: translateX(100%);
+}
+.move-left {
+  transform: translateX(-100%);
+}
+
+.cake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 168px;
+  height: 168px;
+  background-image: url("./cake.png");
+  background-size: cover;
+
+  transition: all 2s ease-out;
+
+  box-shadow: 0 0 24px white;
+  border-radius: 16%;
+
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+}
+
+video,
+source {
+  z-index: 0;
+}
