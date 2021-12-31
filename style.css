@@ -18,160 +18,21 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
   transition: all 0.5s;
+  text-align: center;
+  background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-.container {
-  font-size: 4rem;
+.timerOne {
   color: #f5f6fa;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.timer {
   font-size: 4vh;
   margin: 0 1.7em;
 }
 
-.img1 {
-  width: 10rem;
-  height: 10rem;
-
-  background-image: url("./image1.png");
-  background-position: center;
-  background-size: cover;
-}
-
-.img2 {
-  width: 10rem;
-  height: 10rem;
-
-  background-image: url("./image2.gif");
-  background-position: center;
-  background-size: cover;
-}
-
-.icons {
-  width: auto;
-  font-size: 3rem;
-}
-
-.name-container {
-  display: flex;
-  margin-top: 25px;
-  justify-content: space-around;
-  max-width: 380px;
-  width: 100%;
-
-  opacity: 0;
-  transition: 1s ease-out;
-}
-
-.box {
-  width: 64px;
-  height: 64px;
-
-  background-position: center;
-  background-size: cover;
-
-  border-radius: 50%;
-
-  box-shadow: 0 0 15px #ccc;
-}
-
-.name-container:hover {
-  opacity: 1;
-}
-
-.n {
-  background-image: url("./N.jpeg");
-}
-
-.i {
-  background-image: url("./I.jpeg");
-}
-
-.d {
-  background-image: url("./D.jpeg");
-}
-
-.h {
-  background-image: url("./H.jpeg");
-}
-
-.i {
-  background-image: url("./I.jpeg");
-}
-
-.curtain-container {
-  width: 1024px;
-  height: 512px;
-  margin: 0 12px;
-  position: relative;
-
-  overflow: hidden;
-}
-
-.left-curtain {
-  /* content: ""; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: url("./22.jpeg");
-  background-size: cover;
-  transition: all 2s ease-out;
-  z-index: 0;
-}
-
-.right-curtain {
-  /* content: ""; */
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: url("./22.jpeg");
-  background-size: cover;
-  transition: all 2s ease-out;
-  z-index: 0;
-}
-
-.move-right {
-  transform: translateX(100%);
-}
-.move-left {
-  transform: translateX(-100%);
-}
-
-.cake {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 168px;
-  height: 168px;
-  background-image: url("./cake.png");
-  background-size: cover;
-
-  transition: all 2s ease-out;
-
-  box-shadow: 0 0 24px white;
-  border-radius: 16%;
-
-  opacity: 1;
-}
-
-.fade {
-  opacity: 0;
-}
-
-video,
-source {
-  z-index: 0;
+.timerTwo {
+  color: #f5f6fa;
+  font-size: 3vh;
+  margin: 0 1.7em;
 }
